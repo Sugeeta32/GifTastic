@@ -22,13 +22,15 @@ function displaySport() {
                 var sportDiv = $("<div class ='sport'>");
 
                 var p = $("<p>");
-                p.text(results[i].rating);
+                p.text("Rating: "+results[i].rating);
                 sportDiv.append(p);
 
 
                 var sportImage =$("<img>");
-                sportImage.attr("src",results[i].images.original.url);
+                sportImage.attr("src",results[i].images.fixed_height.url);
                 sportDiv.append(sportImage);
+                
+                
                 $("#sports-view").prepend(sportDiv);
         
 
@@ -37,11 +39,15 @@ function displaySport() {
     });
 
 };
+
+
+
+
 function renderButtons() {
-    $("#sports-view").empty();
+    $("#buttons-view").empty();
     for (var i = 0; i < sports.length; i++) {
         var a = $("<button>");
-        // Adding a class of movie-btn to our button
+        // Adding a class of sport-btn to our button
         a.addClass("sport-btn");
         // Adding a data-attribute
         a.attr("data-sport", sports[i]);
@@ -62,7 +68,6 @@ $("#add-sports").on("click", function (event) {
     renderButtons();
 
 });
-
 
 $(document).on("click", ".sport-btn", displaySport);
 renderButtons();
