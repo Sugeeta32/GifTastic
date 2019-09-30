@@ -25,9 +25,26 @@ function displaySport() {
                 p.text("Rating: "+results[i].rating);
                 sportDiv.append(p);
 
-
+                var animated= results[i].images.fixed_height.url;
+                var still = results[i].images.fixed_height_still.url;
                 var sportImage =$("<img>");
-                sportImage.attr("src",results[i].images.fixed_height.url);
+
+                
+                
+                
+                sportImage.attr("src",still);
+                sportImage.attr("data-still",still);
+                // console.log("data-still",still);
+                sportImage.attr("data-animated",animated);
+                // console.log("data-animated",animated)
+                sportImage.attr("data-state","still");
+
+                sportImage.addClass("sportsImage");
+
+
+
+
+                // sportImage.attr("src",results[i].images.fixed_height.url);
                 sportDiv.append(sportImage);
                 
                 
@@ -58,6 +75,23 @@ function renderButtons() {
 
     }
 }
+
+$(document).on("click",".sportsImage",function(){
+var state = $ (this).data("state");
+if(state=="still"){
+    $(this).attr("src",$(this).data("animated"));
+    $(this).attr("data-state","animated");
+}else{
+    $(this).attr("src",$(this).data("still"));
+    $(this).attr("data-state","still");
+}
+
+})
+
+
+
+
+
 
 $("#add-sports").on("click", function (event) {
     event.preventDefault();
