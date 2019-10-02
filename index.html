@@ -22,26 +22,43 @@
 
     </nav>
     <div class="container-fluid">
-      <div id="firstPage" class="jumbotron   my-2 mx-5 text-light rounded ">
+      <!-- <div id="firstPage" class="jumbotron   my-2 mx-5 text-light rounded ">
         <h1 class="display-4 text-center text-underscore typography mb-3"> Giftastic!</h1>
 
-        <h3>Click a button to enjoy some Giphy Goodness! Click any of the images to see them in motion.
-          Search for your favorite sports... or cats. Whatever.</h3>
-        <!-- Rendered Buttons will get Dumped Here  -->
-        <div id="buttons-view"></div>
+        <h3></h3> -->
+      <!-- Rendered Buttons will get Dumped Here  -->
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Giftastic</h3>
+              <p class="card-text">Click a button to enjoy some Giphy Goodness! Click any of the images to see them in motion.
+                Search for your favorite sports... or cats. Whatever!</p>
+              <div id="buttons-view"></div>
 
-        <form id="sport-form">
+              <form id="sport-form">
 
-          <label for="sport-input">Add your sport choice!</label>
-          <input type="text" id="sport-input">
-          <br>
+                <label for="sport-input">Add your favorite one here!</label>
+                <input type="text" id="sport-input">
+                <br>
 
-          <!-- Button triggers new search to be added -->
+                <!-- Button triggers new search to be added -->
 
-          <input id="add-sports" type="submit" value="Submit">
-        </form>
-        <div class="well">
-          <div class="justify-content-center d-flex flex-wrap" id="sports-view"></div>
+                <input id="add-sports" type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-sm-8">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">Enjoy your gifs here!</h3>
+              <div class="justify-content-center d-flex flex-wrap" id="sports-view"></div>
+
+            </div>
+          </div>
         </div>
 
 

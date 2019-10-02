@@ -1,17 +1,21 @@
 body{
-    /* background-color: rgb(11, 44, 59); */
-    background-color: rgba(146, 182, 202, 0.993);
-    
+     background-color: rgb(11, 44, 59);  
+     /* background-color: rgba(146, 182, 202, 0.993); */ 
+    /* background-color: rgb(110, 79, 92); */
+    font-family: cursive;
 }
-h3,p{
+
+p{
     color: aliceblue;
+    font-size: 20px;
 }
-.sport-btn{
+.sport-btn,#add-sports{
     margin-right: 5px;
+    margin-top: 5px;
     border-radius: 3px;
 
 }
-label{
+h3,label{
     color: aliceblue;
 }
 
@@ -20,15 +24,13 @@ label{
     color: #fff;
     font-size: 80%;
  }
-/* ----------------------------------- */
 
-
-
-.jumbotron{
-    text-align: center;
-    background-color: red;
-}
 .container-fluid {
-    margin-top: 200px;
+    margin-top: 100px;
 } 
-
+.card-title{
+    text-align: center;
+} 
+.card-body{
+    background-color: rgb(255, 124, 1);
+}
