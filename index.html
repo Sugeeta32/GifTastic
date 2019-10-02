@@ -14,31 +14,49 @@
 <body>
 
   <div class="container">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+
+      <a class="navbar-brand" href="#">
+        <h3>Sugeeta Gupta</h3>
+      </a>
+
+    </nav>
+    <div class="container-fluid">
+      <div id="firstPage" class="jumbotron   my-2 mx-5 text-light rounded ">
+        <h1 class="display-4 text-center text-underscore typography mb-3"> Giftastic!</h1>
+
+        <h3>Click a button to enjoy some Giphy Goodness! Click any of the images to see them in motion.
+          Search for your favorite sports... or cats. Whatever.</h3>
+        <!-- Rendered Buttons will get Dumped Here  -->
+        <div id="buttons-view"></div>
+
+        <form id="sport-form">
+
+          <label for="sport-input">Add your sport choice!</label>
+          <input type="text" id="sport-input">
+          <br>
+
+          <!-- Button triggers new search to be added -->
+
+          <input id="add-sports" type="submit" value="Submit">
+        </form>
+        <div class="well">
+          <div class="justify-content-center d-flex flex-wrap" id="sports-view"></div>
+        </div>
 
 
-    <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons-view"></div>
 
-    <form id="sport-form">
 
-      <label for="sport-input">Add your sport choice!</label>
-      <input type="text" id="sport-input">
-      <br>
-
-      <!-- Button triggers new search to be added -->
-
-      <input id="add-sports" type="submit" value="Submit">
-    </form>
-    <div class="well">
-      <div id="sports-view"></div>
+      </div>
     </div>
+    <footer class="page-footer font-small fixed-bottom mt-5 ">
 
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3">© 2023 Copyright by Sugeeta Gupta</div>
+      <!-- Copyright -->
 
-
-
+    </footer>
   </div>
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="assets/javascript/app.js" type="text/javascript"></script>
 
